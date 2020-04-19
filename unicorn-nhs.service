@@ -1,0 +1,13 @@
+[Unit]
+Description=runs the unicorn NHS script
+After=multi-user.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/shearna/repos/unicornNHS
+ExecStart=/home/shearna/repos/unicornNHS/main.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
